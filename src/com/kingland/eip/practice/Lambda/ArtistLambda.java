@@ -25,17 +25,10 @@ public class ArtistLambda {
         Predicate<Artist> a = Artist->Artist.getName().startsWith("A");
         stream.filter(a).forEach(Artist-> System.out.println(Artist));
         System.out.println("Get all ages from artists:");
-
-
-
+        //2. Get all ages from artists
+        Stream<Integer> ages = artist.stream().map(Artist -> Artist.getAge());
+        ages.forEach(Artist -> System.out.println(Artist));
 
     }
-
-
-
-
-
-
-
 
 }
