@@ -1,5 +1,11 @@
+/*
+ * Copyright 2020 Kingland Systems Corporation. All Rights Reserved.
+ */
 package com.kingland.eip.practice.CompletionStage;
 
+/**
+ * Defines the Book entity class Book (field id, name, score)
+ */
 public class Book {
     private Long id;
     private String name;
