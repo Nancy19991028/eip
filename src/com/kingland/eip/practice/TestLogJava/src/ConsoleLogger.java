@@ -1,3 +1,6 @@
+/**
+ * Copyright 2020 Kingland Systems Corporation. All Rights Reserved.
+ */
 package com.kingland.eip.practice.TestLogJava.src;
 
 public class ConsoleLogger extends BaseLogger {
