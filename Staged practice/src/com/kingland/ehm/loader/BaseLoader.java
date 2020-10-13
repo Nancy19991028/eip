@@ -14,9 +14,8 @@ public abstract class BaseLoader<T> extends Thread {
     @Override
     public void run() {
         while (true) {
-            if (buffer.size() < buffer.getMax()) {
-                buffer.add(getData());
-            }
+            buffer.add(getData());
         }
+
     }
 }

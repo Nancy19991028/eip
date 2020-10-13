@@ -14,9 +14,8 @@ public abstract class BaseSender<T> extends Thread {
     @Override
     public void run() {
         while (true) {
-            if (buffer.size() > 0) {
-                send((T) buffer.poll());
-            }
+            send((T) buffer.poll());
         }
+
     }
 }

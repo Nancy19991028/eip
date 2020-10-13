@@ -2,6 +2,8 @@ package com.kingland.ehm.loader;
 
 import com.kingland.ehm.buffer.BaseBuffer;
 
+import java.util.Scanner;
+
 public class ConsoleLoader extends BaseLoader {
     public ConsoleLoader(BaseBuffer buffer) {
         super(buffer);
@@ -9,7 +11,8 @@ public class ConsoleLoader extends BaseLoader {
 
     @Override
     public Object getData() {
-        double random = Math.random();
-        return "Hello world! " + random;
+        Scanner cin=new Scanner(System.in);
+        int a=cin.nextInt();
+        return a;
     }
 }

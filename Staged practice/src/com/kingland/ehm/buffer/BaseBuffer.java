@@ -13,7 +13,7 @@ public abstract class BaseBuffer<T>{
 
     public abstract int size();
 
-    public abstract boolean add(Object o);
+    public abstract void add(Object o);
 
     public abstract Object poll();
 }

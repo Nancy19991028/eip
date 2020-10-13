@@ -14,7 +14,7 @@ public class Main {
         BaseLoader loader = new ConsoleLoader(buffer);
         BaseSender sender = new ConsoleSender(buffer);
 
-        loader.setPriority(10);
+        loader.setPriority(1);
         sender.setPriority(1);
 
         loader.start();
