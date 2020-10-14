@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/MockIoc/MockIoc.iml" filepath="$PROJECT_DIR$/MockIoc/MockIoc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Staged practice/Staged practice.iml" filepath="$PROJECT_DIR$/Staged practice/Staged practice.iml" />
       <module fileurl="file://$PROJECT_DIR$/eip.iml" filepath="$PROJECT_DIR$/eip.iml" />
     </modules>
   </component>
