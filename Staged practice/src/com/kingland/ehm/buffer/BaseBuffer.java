@@ -1,6 +1,14 @@
+/*
+ * Copyright 2020 Kingland Systems Corporation. All Rights Reserved.
+ */
+
 package com.kingland.ehm.buffer;
 
-public abstract class BaseBuffer<T>{
+/**
+ * @author KSC
+ * @description The base class of all buffers
+ */
+public abstract class BaseBuffer<T> {
     private final int max;
 
     protected BaseBuffer(int max) {

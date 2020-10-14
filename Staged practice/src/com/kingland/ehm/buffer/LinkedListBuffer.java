@@ -1,3 +1,7 @@
+/*
+ * Copyright 2020 Kingland Systems Corporation. All Rights Reserved.
+ */
+
 package com.kingland.ehm.buffer;
 
 import java.util.LinkedList;
@@ -6,11 +10,22 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * @author KSC
+ * @description The buffer used Linked List which can add and poll elements
+ */
 public class LinkedListBuffer<T> extends BaseBuffer {
     private final Queue<T> queue;
 
-    private Lock lock = new ReentrantLock();//创建锁对象
-    private Condition condition = lock.newCondition();//创建锁的条件，情况
+    /**
+     * Create a lock object
+     */
+    private Lock lock = new ReentrantLock();
+
+    /**
+     * Conditions for creating locks
+     */
+    private Condition condition = lock.newCondition();
 
     public LinkedListBuffer(int max) {
         super(max);
@@ -22,6 +37,10 @@ public class LinkedListBuffer<T> extends BaseBuffer {
         return queue.size();
     }
 
+    /**
+     * Create a lock for the Add loop
+     * @param o to add
+     */
     @Override
     public void add(Object o) {
         try {
@@ -46,6 +65,10 @@ public class LinkedListBuffer<T> extends BaseBuffer {
 
     }
 
+    /**
+     * Create a lock for the Poll loop
+     * @return the first element
+     */
     @Override
     public Object poll() {
         T poll;
