@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kingland.springboot2.mapper.StudentModelMapper">
+    <select id="getAllStudents" resultType="com.kingland.springboot2.model.StudentModel">
+        select id, age from spring.student
+    </select>
+    <delete id="deleteStudent" parameterType="int">
+        delete from spring.student where id = #{id}
+    </delete>
+</mapper>
